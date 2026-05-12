@@ -48,21 +48,21 @@ pip install google-generativeai
 
 The refinement API key is never hardcoded. Set it before running.
 
-Default provider is OpenAI-compatible API:
+The main LLM setup used in the paper is Gemini 2.5 Flash:
+
+```bash
+export LLM_PROVIDER=gemini
+export GEMINI_API_KEY="your_gemini_api_key"
+export GEMINI_MODEL="gemini-2.5-flash"
+```
+
+OpenAI-compatible providers are also supported:
 
 ```bash
 export LLM_PROVIDER=openai
 export NVIDIA_API_KEY="your_api_key"
 export LLM_BASE_URL="https://integrate.api.nvidia.com/v1"
 export LLM_MODEL="qwen/qwen3-coder-480b-a35b-instruct"
-```
-
-Gemini-native provider:
-
-```bash
-export LLM_PROVIDER=gemini
-export GEMINI_API_KEY="your_gemini_api_key"
-export GEMINI_MODEL="gemini-2.5-flash"
 ```
 
 Optional W&B logging:
@@ -140,9 +140,7 @@ The pipeline then computes:
 
 ## Notes
 
-- `utils/create_embeddings.py` is not part of the main pipeline and has been removed. Existing datasets already include the embedding files used by training/refinement.
 - `--gemini_api_key` is kept for backward compatibility as the general refinement API key argument. With `--llm_provider gemini`, it should be a real Gemini key. With `--llm_provider openai`, it should be a key accepted by the configured OpenAI-compatible endpoint.
-- The default refinement provider is `openai` to preserve the previous behavior.
 
 ## Citation
 

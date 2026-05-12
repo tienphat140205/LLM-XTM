@@ -1,0 +1,10 @@
+lang1: en
+lang2: ja
+dict_path: ../data/dict/MUSE/ja-en.txt
+weight_MI: 50.0  # InfoCTM mutual information weight for Rakuten_Amazon
+
+# XTRA weights for Rakuten_Amazon
+weight_InfoNCE: 85
+weight_beta: 5
+weight_cluster: 10
+

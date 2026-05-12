@@ -1,0 +1,9 @@
+# macOS/editor noise
+.DS_Store
+__pycache__/
+*.pyc
+
+# ECNews train document embeddings exceed GitHub's 100 MB file limit.
+# Commit the corresponding .part*.npy shards instead.
+data/ECNews/doc_embeddings_en_train.npy
+data/ECNews/doc_embeddings_cn_train.npy

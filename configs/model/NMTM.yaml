@@ -1,0 +1,12 @@
+ens_unit: 100 
+lam: 0.8
+topic_num: 50
+learning_rate: 0.001
+dropout: 0.
+epochs: 230
+batch_size: 128
+lr_step_size: 125
+lr_gamma: 0.5
+lr_scheduler: StepLR
+test_index: 0
+temperature: 0.2

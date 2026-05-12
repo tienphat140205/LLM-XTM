@@ -1,0 +1,9 @@
+lang1: en
+lang2: cn
+dict_path: ../data/dict/ch_en_dict.dat
+weight_MI: 50.0  # InfoCTM mutual information weight for Amazon_Review
+
+# XTRA weights for Amazon_Review
+weight_InfoNCE: 95
+weight_beta: 15
+weight_cluster: 10
